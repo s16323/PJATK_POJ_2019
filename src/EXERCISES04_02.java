@@ -82,12 +82,16 @@ class Point3D extends Point2D{
         this.z = z;
     }
 
-    public float[] getXYZ {
+    public float[] getXYZ(){
         float coords[] = new float[3];
         coords[0] = super.getX();
         coords[1] = super.getY();
         coords[2] = z;
         return coords;
+    }
+
+    public String toString(){
+        return "(" + super.getX() + "," + super.getY() + "," + z +")";
     }
 
 }

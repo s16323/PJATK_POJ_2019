@@ -1,7 +1,7 @@
 Repo zawiera zadania z ćwiczeń POJ
 
-Artur Dembicki 16323
-Aleksander Mojzych
+- Artur Dembicki 16323 
+- Aleksander Mojzych
 
 1. Human
 2.
