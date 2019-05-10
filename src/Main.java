@@ -22,7 +22,14 @@ public class Main {
         System.out.println(item.toString());
         System.out.println(item.getTotal());
 
-
+        Account Account001 = new Account("001", "Account001", 1234);
+        Account Account002 = new Account("002", "Account002", 50);
+        System.out.println(Account001.toString());
+        Account001.credit(100);
+        System.out.println(Account001.toString());
+        Account001.transferTo(Account002, 1000);
+        System.out.println(Account001.toString());
+        System.out.println(Account002.toString());
 
 
 
