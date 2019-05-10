@@ -11,7 +11,7 @@ Aleksander Mojzych
 6. EXERCISES03_02 InvoiceItem
 7. EXERCISES03_03 Account
 8. EXERCISES03_04 Date
-9.
+9. EXERCISES03_05 Time
 10.
 11.
 12.
