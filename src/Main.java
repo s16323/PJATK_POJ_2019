@@ -1,8 +1,9 @@
 
 /*
+Zadania z POJ 2019
 Autor: Artur Dembicki 16323
 email: s16323@pjwstk.edu.pl
-
+repo: https://github.com/s16323/PJATK_POJ_2019
 */
 
 

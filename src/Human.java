@@ -1,4 +1,10 @@
-
+/*
+Cw 1
+Zad 1
+Utwórz klasę Human reprezentującą człowieka, musi posiadać atrybuty takie jak wiek, waga, wzrost, imię i płeć, numer indeksu, rozmiar stopy.
+Klasa powinna także zawierać metody getAge, getWeight, getHeight, getName, isMale, getFeetSize, getIndexNumber.
+Stwórz także odpowiednie metody set. Stwórz przykładowy obiekt zwierający Twoje dane.
+ */
 
 public class Human {
 
@@ -76,6 +82,13 @@ public class Human {
 
     public void setFoot(int foot) {
         this.foot = foot;
+    }
+
+    public boolean isMale(String gender) {
+        if (gender == "male")
+            return true;
+        else
+            return false;
     }
 }
 
