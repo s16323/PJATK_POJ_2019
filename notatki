@@ -1,0 +1,43 @@
+materiay:   http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/
+repo:       https://github.com/s16323/PJATK_POJ_2019.git
+
+CW2
+========================
+
+wysać link do repo na maila do nastepnych zajeć
+
+abstrakcja
+dziedziczenie
+enkapsulacja (hermetyzacja)
+polimorfizm
+
+modyfikatory dostepu:
+private - dost w tej klasie
+protected - dost w klasie i klasach dziedziczacych
+default - dost w package
+public - dost wszedzie
+
+Wielodziedziczenie -
+W javie NIE MA WIELODZIEDZICZENIA!!! (w C++ i pythonie jest)
+
+konstruktor - metoda w klasie, która tworzy obiekt tej klasy jak jest wezwana
+              NIE ZWRACA PARAMETRÓW - tylk otworzy obiekt
+              Moze byc wiecej niz jeden konstruktor (overloading)
+
+extends - dziedziczy
+
+
+
+CW3
+========================
+
+http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_03_2019.04.06.pdf
+
+enum - zawiera okerslone wartosci, np. pleć: M, K
+ctrl+space - okno podpowiedzi
+
+Arraylist - kolekcja - dodawanie elementu jest do końca listy
+
+super() - wywolanie konstruktora klasy nadrzednej
+
+UML - Unfied Modelling Language -
