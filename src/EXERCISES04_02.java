@@ -49,5 +49,45 @@ class Point2D {
         return coords;
     }
 
+    public String toString(){
+        return "(" + x + "," + y + ")";
+    }
+}
+
+class Point3D extends Point2D{
+
+    private float z = 0.0f;
+
+    public Point3D() {
+        super();
+        this.z = z;
+    }
+
+    public Point3D(float x, float y, float z) {
+        super(x, y);
+        this.z = z;
+    }
+
+    public float getZ() {
+        return z;
+    }
+
+    public void setZ(float z) {
+        this.z = z;
+    }
+
+    public void setXYZ(float x, float y, float z) {
+        super.setX(x);
+        super.setY(y);
+        this.z = z;
+    }
+
+    public float[] getXYZ {
+        float coords[] = new float[3];
+        coords[0] = super.getX();
+        coords[1] = super.getY();
+        coords[2] = z;
+        return coords;
+    }
 
 }
