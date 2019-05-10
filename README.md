@@ -16,5 +16,5 @@ Repo zawiera zadania z ćwiczeń POJ
 11.
 12. EXERCISES04_01 Person, Student, Staff
 13. EXERCISES04_02 Point2D, Point3D
-14. 
+14. EXERCISES04_03 Point MovablePoint
 

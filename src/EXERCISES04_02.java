@@ -4,8 +4,6 @@ Zad 2
 http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_04_2019.04.27.pdf
 */
 
-import java.util.ArrayList;
-
 class Point2D {
 
     private float x = 0.0f;
