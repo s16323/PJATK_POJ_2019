@@ -17,7 +17,11 @@ public class Main {
 
         Times time = new Times();
         System.out.println(time.getChannelListName());
-        System.out.println("test test");
+
+        InvoiceItem item = new InvoiceItem("0001", "deskrypszon", 666, 6.90);
+        System.out.println(item.toString());
+        System.out.println(item.getTotal());
+
 
 
 

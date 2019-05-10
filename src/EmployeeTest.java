@@ -1,3 +1,12 @@
+/*
+Cw 2
+Zad 1
+http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_03_2019.04.06.pdf
+
+Create test class for each UML diagram
+ */
+
+
 public class EmployeeTest {
 
 
