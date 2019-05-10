@@ -6,9 +6,9 @@ http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_03_2019
 
 public class Account {
 
-    String id;
-    String name;
-    int balance;
+    private String id;
+    private String name;
+    private int balance;
 
     public Account(String id, String name) {
         this.id = id;

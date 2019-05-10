@@ -31,6 +31,9 @@ public class Main {
         System.out.println(Account001.toString());
         System.out.println(Account002.toString());
 
+        Date testDaty = new Date(1, 8, 2019);
+        System.out.println(testDaty.toString());
+
 
 
 
