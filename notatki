@@ -51,3 +51,19 @@ CW5
 
 Egzamin: 7 zjazd 8 czerwca  -  test
 
+is-a     -- Inheritance
+has-a    -- Aggregation
+part-of  -- Composition
+
+
+Asocjacja  - luzne powiaznie - np.tylko w mainie
+
+Agregacja  - mocniejsze powiazanie - Klasa zawieraja inne klasy - konstruktor wymaga podania obiektow podrzednych
+
+Kompozycja - silne powizanie - Konstruktor sam tworzy instancje obiektu podrzednego - Znika klasa nadrzdna - znikaja obiekty podrzdne
+
+
+
+yEd, DrawIO
+
+Zad Bonusowe za 2p. zrobić

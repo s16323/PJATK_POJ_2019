@@ -1,7 +1,7 @@
 Repo zawiera zadania z ćwiczeń POJ
 
-- Artur Dembicki 16323 
-- Aleksander Mojzych
+- Artur Dembicki        16323 
+- Aleksander Mojzych    15595
 
 1. Human
 2.
@@ -17,4 +17,5 @@ Repo zawiera zadania z ćwiczeń POJ
 12. EXERCISES04_01 Person, Student, Staff
 13. EXERCISES04_02 Point2D, Point3D
 14. EXERCISES04_03 Point MovablePoint
+15. 
 
