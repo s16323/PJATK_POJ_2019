@@ -58,8 +58,8 @@ class Point {
 
 class MovablePoint extends Point{
 
-    float xSpeed = 0.0f;
-    float ySpeed = 0.0f;
+    private float xSpeed = 0.0f;
+    private float ySpeed = 0.0f;
 
     public MovablePoint(float xSpeed, float ySpeed) {
         super();
