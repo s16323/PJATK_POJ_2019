@@ -1,7 +1,6 @@
 /*
 Autorzy:   Artur Dembicki 16323
-Cw 1
-Zad 1
+Cw 1 Zad 1
 http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_02_2019.03.23.pdf
 
 Utwórz klasę Human reprezentującą człowieka, musi posiadać atrybuty takie jak wiek, waga, wzrost, imię i płeć, numer indeksu, rozmiar stopy.

@@ -1,8 +1,7 @@
 /*
 Autorzy:   Artur Dembicki 16323
-           Aleksander Mojzych
-Cw 4
-Zad 1
+           Aleksander Mojzych 15595
+Cw 4 Zad 1
 http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_04_2019.04.27.pdf
 */
 

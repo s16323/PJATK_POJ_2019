@@ -1,6 +1,10 @@
 /*
-Autorzy: Aleksander Mojzych, Artur Dembicki 10.05.2019
- */
+Autorzy:   Artur Dembicki 16323
+           Aleksander Mojzych 15595
+Cw 4 Zad 6
+http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_04_2019.04.27.pdf
+*/
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
