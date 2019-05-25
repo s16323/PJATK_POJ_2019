@@ -67,3 +67,24 @@ Kompozycja - silne powizanie - Konstruktor sam tworzy instancje obiektu podrzedn
 yEd, DrawIO
 
 Zad Bonusowe za 2p. zrobić
+
+
+CW6
+========================
+
+klasa abstrakcyjna - nie moze byc tworzona, mozna tylko po niej dziedziczc (pochyla czcionka w UML)
+
+interfejs - rozszerzenie klasy abstr. nie mozna zrobic obiektu. inne obiekty IMPLEMENUJA interfejs. Zawiera wylacznie sygnatury metod (nie implementacje)
+metody sa zaimplementowane w klasie podrzednej.
+
+
+
+
+
+
+
+
+
+
+
+
