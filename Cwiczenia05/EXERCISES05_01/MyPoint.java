@@ -22,18 +22,22 @@ public class MyPoint {
     }
 
     public int getX() {
+
         return x;
     }
 
     public void setX(int x) {
+
         this.x = x;
     }
 
     public int getY() {
+
         return y;
     }
 
     public void setY(int y) {
+
         this.y = y;
     }
 
@@ -50,45 +54,31 @@ public class MyPoint {
 
     @Override
     public String toString() {
+
         return "(" + x + "," + y + ")";
     }
 
-//    public double distance(int x, int y){
-//
-//
-//    }
+    public double distance(int x, int y){
+        // Distance from this point to a given point (x, y)
+        double dist = Math.sqrt((this.x - x)^2 + (this.y - y)^2);
+        return dist;
+    }
 
     public double distance(MyPoint another){
+        // Distance from this point to a given instance of MyPoint
 
         int x0 = another.getX();
         int y0 = another.getY();
 
-//    double dist = java.lang.Math.sqrt(Math.pow((this.x - x0), 2)+ Math.pow((this.y - y0), 2));
         double dist = Math.sqrt((this.x - x0)^2 + (this.y - y0)^2);
         return dist;
     }
 
     public double distance(){
-
+        // Distance from this point to (0,0)
         double dist = Math.sqrt((this.x)^2 + (this.y)^2);
         return dist;
     }
 
 }
 
-class Main {
-
-    public static void main(String[] args) {
-
-        MyPoint myPoint = new MyPoint(1,1);
-
-        //Array<MyPoint> list = new Array();
-        List<MyPoint> list = new
-
-        for (i = 1, i <= list.length, i++){
-
-//            list.add(MyPoint(i,i));
-
-        }
-    }
-}
