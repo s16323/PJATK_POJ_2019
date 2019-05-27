@@ -2,7 +2,6 @@
 Autor: Artur Dembicki 16323
 Cw 5, Zad 1
 http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_05_2019.05.11.pdf
-
  */
 import java.lang.Math;
 import java.lang.reflect.Array;
