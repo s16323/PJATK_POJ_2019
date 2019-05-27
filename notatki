@@ -42,6 +42,12 @@ super() - wywolanie konstruktora klasy nadrzednej
 
 UML - Unfied Modelling Language -
 
++ public
+- private
+# protected
+~ default
+
+
 
 CW4
 ========================
