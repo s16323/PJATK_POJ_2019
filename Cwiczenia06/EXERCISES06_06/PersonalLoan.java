@@ -7,7 +7,7 @@ Autorzy:    Aleksander Mojzych
 http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_06_2019.05.25.pdf
  */
 
-package Loan;
+//package Loan;
 
 public class PersonalLoan extends Loan {
     PersonalLoan(String loanNumber, String lastName, double loanAmount, int term, double primeInterestRate){
