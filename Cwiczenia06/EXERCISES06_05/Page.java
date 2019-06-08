@@ -2,7 +2,7 @@
 Autorzy: Aleksander Mojzych, Artur Dembicki  07.06.2019
  */
 
-package Turner;
+// package Turner;
 
 public class Page implements Turner {
     public void turn(){
