@@ -84,13 +84,22 @@ interfejs - rozszerzenie klasy abstr. nie mozna zrobic obiektu. inne obiekty IMP
 metody sa zaimplementowane w klasie podrzednej.
 
 
+CW7
+========================
 
+Wzorce Projektowe
 
+Creational Patterns:
+SINGLETON - cos co wystepuje tyko raz w przyrodzie (jeden tego typu)
+BUILDER - element posredniczacy zamiast skomplikowanego konstruktora
+FACTORY - tworzy wiele ROZNYCH (ale podobnych) obiektow (wyizolowanych). Przejmie na siebie ustalenie jak taki obiekt powinien byc tworzony
 
+Structural Patterns:
+FACADE - chowa przed uzytkownikiem czego nie musi wiedziec i robic sam.
+ADAPTER - wrapper
 
-
-
-
+MVC - sprawdzic
+MVVM - app mobilne - obczaić
 
 
 
