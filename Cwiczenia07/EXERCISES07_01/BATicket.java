@@ -5,9 +5,7 @@ http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_07_2019
 */
 import java.time.LocalDateTime;
 
-public class UATicketInfo {
-    String from;
-    String to;
-    LocalDateTime dateTime;
-    double price;
+public class BATicket {
+    LocalDateTime departureTime;
+    double ticketPrice;
 }

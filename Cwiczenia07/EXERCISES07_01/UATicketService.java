@@ -6,7 +6,7 @@ http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_07_2019
 import java.util.Date;
 import java.util.List;
 
-public interface BATicketService {
-    List<BATicket> getTicketInfo(Airport from, Airport to, Date
-            when);
+public interface UATicketService {
+    List<UATicketInfo> getTicketInfo(String from, String to,
+                                     Date when);
 }
