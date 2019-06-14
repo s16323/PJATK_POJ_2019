@@ -4,16 +4,25 @@
     http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_07_2019.06.08.pdf
      */
 public class Auction {
-    char type;
-    String auctionName;
-    String auctionDescription;
-    double startPrice;
-    int auctionDuration;
-    AuctionUser auctionuser;
+    private char type;
+    private String auctionName;
+    private String auctionDescription;
+    private double startPrice;
+    private int auctionDuration;
+    private AuctionUser auctionuser;
 
     public Auction(char type) {
         this.type = type;
     }
+
+//    public Auction(char type, String auctionName, String auctionDescription, double startPrice, int auctionDuration, AuctionUser auctionuser) {
+//        this.type = type;
+//        this.auctionName = auctionName;
+//        this.auctionDescription = auctionDescription;
+//        this.startPrice = startPrice;
+//        this.auctionDuration = auctionDuration;
+//        this.auctionuser = auctionuser;
+//    }
 
     public Auction Name(String auctionName) {
         this.auctionName = auctionName;
@@ -64,6 +73,7 @@ public class Auction {
             return false;
     }
 
+    // Wyszukaj aukcję po loginie usera
     public String searchLogin(AuctionUser user) {
         return auctionName;
     }

@@ -35,6 +35,6 @@ public class AuctionUser {
     private AuctionUser(){}
 
     public String getName(){
-        return firstName+" "+lastName;
+        return firstName + " " + lastName;
     }
 }

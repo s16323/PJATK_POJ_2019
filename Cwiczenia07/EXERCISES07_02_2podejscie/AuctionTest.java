@@ -7,28 +7,28 @@
 
     public static void main (String[] args){
         AuctionUser user = new AuctionUser('s')
-                .Name("Kacper", "Wieczorek")
-                .eMail("kakastg9@gmail.com")
+                .Name("testUser", "testUserSurname")
+                .eMail("test@gmail.com")
                 .build();
         Auction auction = new Auction('p')
-                .Description("Rower")
+                .Description("test description")
                 .Duration(5)
-                .Name("Sprzedam rower")
-                .PriceStart(25.0d)
+                .Name("test auction name")
+                .PriceStart(100.0d)
                 .addingUser(user)
                 .build();
-        if(auction.type=='p'){
-            if(auction.auctionDuration==0){
+        if(auction.type == 'p'){
+            if(auction.auctionDuration == 0){
                 auction.auctionWon(user);
             }
-        }else if(auction.type=='w'){
-            if(auction.auctionDuration==0){
+        }else if(auction.type == 'w'){
+            if(auction.auctionDuration == 0){
                 auction.auctionWon(user);
-                auction.auctionDuration+=1;
+                auction.auctionDuration += 1;
             }
-        }else if(auction.type=='o'){
+        }else if(auction.type == 'o'){
             if(auction.isAuctioned()){
-                auction.startPrice-=1;
+                auction.startPrice -= 1;
                 System.out.println(auction.startPrice);
             }
         }
