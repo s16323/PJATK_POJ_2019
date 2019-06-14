@@ -1,15 +1,70 @@
+import java.util.UUID;
+import java.util.Date;
+import java.util.Random;
+
 public class Auction {
 
     // id must be unique
-    private int id;
+    private UUID id = new UUID.randomUUID();
     private String auctionType = "normal";      // typ aukcji - podaje seller
     private int startingPrice = 1;              // cena poczatkowa - podaje seller
     private int rounds;                         // ilosc rund - podaje seller
     private int minimalStars = 0;               // minimalna ilość gwiazdek - podaje seller
-    private boolean active = false;
+    private boolean active;
     private User seller;
-    private User highestBider;
+    private User highestBidder;
     private int highestBid;
+
+    public Auction(String auctionType, int startingPrice, int rounds, int minimalStars, User seller, User highestBidder, int highestBid) {
+        this.auctionType = auctionType;
+        this.startingPrice = startingPrice;
+        this.rounds = rounds;
+        this.minimalStars = minimalStars;
+        this.active = true;
+        this.seller = seller;
+        this.highestBidder = highestBidder;
+        this.highestBid = highestBid;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getAuctionType() {
+        return auctionType;
+    }
+
+    public int getStartingPrice() {
+        return startingPrice;
+    }
+
+    public int getRounds() {
+        return rounds;
+    }
+
+    public void setRounds(int rounds) {
+        this.rounds = rounds;
+    }
+
+    public int getMinimalStars() {
+        return minimalStars;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public User getSeller() {
+        return seller;
+    }
+
+    public User getHighestBidder() {
+        return highestBidder;
+    }
+
+    public int getHighestBid() {
+        return highestBid;
+    }
 
     // wzorce:
     // FACTORY: 3 rodzaje aukcji, rozniace sie zasadami
@@ -24,8 +79,39 @@ public class Auction {
 
     //methods:
 
-    //iterateRounds()
-    //      czas 1 rundy
+    private void iterateRounds()
+    {
+        //  1 runda to jeden bid: po każdym bidzie: rounnds = rounds - 1;
+        //  jak rounds = 0: koniec aukcji: active = false;
+        this.rounds = this.rounds - 1;
+        if (this.rounds <= 0)
+        {
+            this.active = false;
+        }
+    }
+
 
     //bid(User buyer, int bidAmount)
+    public void bid(User buyer, int bidAmount)
+    {
+        if (this.active && bidAmount > this.highestBid)
+        {
+            this.highestBidder = buyer;
+            this.highestBid = bidAmount;
+            iterateRounds();
+        }
+        else System.out.println("Bidding blocked");
+        // TODO: do try/catch instead and manage exceptions: bidToSmall, auctionIsOver
+    }
+
+
+
+
+
+    // zakończ aukcje przed czasem
+    public void setActiveFalse() {
+        this.active = false;
+    }
+
+
 }
