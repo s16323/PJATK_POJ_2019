@@ -2,8 +2,10 @@ public class Auction {
 
     // id must be unique
     private int id;
-    private String auctionType = "normal";
-    private int rounds;
+    private String auctionType = "normal";      // typ aukcji - podaje seller
+    private int startingPrice = 1;              // cena poczatkowa - podaje seller
+    private int rounds;                         // ilosc rund - podaje seller
+    private int minimalStars = 0;               // minimalna ilość gwiazdek - podaje seller
     private boolean active = false;
     private User seller;
     private User highestBider;
