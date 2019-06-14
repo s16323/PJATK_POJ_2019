@@ -5,7 +5,7 @@ import java.util.Random;
 public class Auction {
 
     // id must be unique
-    private UUID id = new UUID.randomUUID();
+    private int id = (int)(Math.random() * 1000 + 100);
     private String auctionType = "normal";      // typ aukcji - podaje seller
     private int startingPrice = 1;              // cena poczatkowa - podaje seller
     private int rounds;                         // ilosc rund - podaje seller
@@ -26,7 +26,7 @@ public class Auction {
         this.highestBid = highestBid;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
