@@ -1,3 +1,9 @@
+/*
+Autor: Artur Dembicki 16323
+Cw 7, Zad 2
+http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_07_2019.06.08.pdf
+*/
+
 import java.sql.Time;
 import java.util.UUID;
 import java.util.Date;
@@ -11,6 +17,7 @@ public class Auction {
     // id must be unique
     private int id = (int) (Math.random() * 1000 + 100);
     private String auctionType = "normal";      // typ aukcji - podaje seller
+    private String description = "";
     private int startingPrice = 1;              // cena poczatkowa - podaje seller
     private int rounds;                         // ilosc rund - podaje seller
     private int minimalStars = 0;               // minimalna ilość gwiazdek - podaje seller
@@ -19,15 +26,14 @@ public class Auction {
     private User highestBidder;
     private int highestBid;
 
-    public Auction(String auctionType, int startingPrice, int rounds, int minimalStars, User seller, User highestBidder, int highestBid) {
+    public Auction(String auctionType, String description, int startingPrice, int rounds, int minimalStars, User seller) {
         this.auctionType = auctionType;
+        this.description = description;
         this.startingPrice = startingPrice;
         this.rounds = rounds;
         this.minimalStars = minimalStars;
         this.active = true;
         this.seller = seller;
-        this.highestBidder = highestBidder;
-        this.highestBid = highestBid;
     }
 
     public int getId() {

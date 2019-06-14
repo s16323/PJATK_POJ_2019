@@ -1,3 +1,9 @@
+/*
+Autor: Artur Dembicki 16323
+Cw 7, Zad 2
+http://szuflandia.pjwstk.edu.pl/~pczapiewski/POJ_2018-2019/POJ_cwiczenia_07_2019.06.08.pdf
+*/
+
 public class User {
 
     //login, email must be unique
@@ -18,14 +24,36 @@ public class User {
     }
 
     //methods:
-    // createAuction(title, startingPrice, description, periodInNrOfBiddings, minimalStarsToBid)
 
-    // recieveStar()
 
-    // grantStar(Auction)
-    //     czy zakonczona?
-    //     czy jestes sprzedawca?
-    //     komu przyznac? --> buyer
+    public void recieveStar(){
+        this.stars = this.stars +1;
+        //TODO: Prevent cheating
+    }
+
+    private void grantStar(Auction auction){
+        //     czy zakonczona?
+        //     czy jestes sprzedawca?
+        //     komu przyznac? --> buyer
+        if (!auction.isActive() && auction.getSeller() == this){
+            User userToReward = auction.getHighestBidder();
+            userToReward.recieveStar();
+            //TODO: block any more stars for this auction ID
+        }
+
+    }
+
+
+    private void createAuction(String auctionType, String description, int startingPrice, int rounds, int minimalStars){
+        User seller = this;
+        Auction myAuction = new Auction(auctionType, description, startingPrice, rounds, minimalStars, seller);
+    }
+
+
+    private void placeBid(Auction auction, int bidAmount){
+        User buyer = this;
+        auction.bid(buyer,bidAmount);
+    }
 
 
 
