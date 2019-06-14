@@ -1,11 +1,15 @@
+import java.sql.Time;
 import java.util.UUID;
 import java.util.Date;
 import java.util.Random;
+import java.time.Instant;
+import java.util.concurrent.TimeUnit;
+
 
 public class Auction {
 
     // id must be unique
-    private int id = (int)(Math.random() * 1000 + 100);
+    private int id = (int) (Math.random() * 1000 + 100);
     private String auctionType = "normal";      // typ aukcji - podaje seller
     private int startingPrice = 1;              // cena poczatkowa - podaje seller
     private int rounds;                         // ilosc rund - podaje seller
@@ -79,39 +83,52 @@ public class Auction {
 
     //methods:
 
-    private void iterateRounds()
-    {
+    private void iterateRoundsNormal() {
         //  1 runda to jeden bid: po każdym bidzie: rounnds = rounds - 1;
         //  jak rounds = 0: koniec aukcji: active = false;
         this.rounds = this.rounds - 1;
-        if (this.rounds <= 0)
-        {
+        if (this.rounds <= 0) {
             this.active = false;
         }
     }
+    private void iterateRoundsPrelongated() {
+        //  1 runda to jeden bid lub czas 10s
+        //  kazdy bid wydluza aukcje o 1 runde: rounnds = rounds + 1;
+        //  koniec gdy pojawi sie runda bez bidow: active = false;
+        //this.rounds = this.rounds + 1;
+        //TimeUnit.SECONDS.sleep(10);
+        this.active = false;
+    }
+//    private void iterateRoundsReversed() {
+//        //  kazdy bid obniza cene o '1'
+//        //  kazdy bid kosztuje bidera '1'
+//        //  bider wtedy bierze albo nie bierze, jak nie bierze to nastepna runda
+//
+//    }
+
+
 
 
     //bid(User buyer, int bidAmount)
-    public void bid(User buyer, int bidAmount)
-    {
-        if (this.active && bidAmount > this.highestBid)
-        {
+    public void bid(User buyer, int bidAmount) {
+        if (this.active && bidAmount > this.highestBid) {
             this.highestBidder = buyer;
             this.highestBid = bidAmount;
-            iterateRounds();
-        }
-        else System.out.println("Bidding blocked");
+            iterateRoundsNormal();
+        } else System.out.println("Bidding blocked");
         // TODO: do try/catch instead and manage exceptions: bidToSmall, auctionIsOver
     }
 
 
 
 
-
     // zakończ aukcje przed czasem
-    public void setActiveFalse() {
+    public void setActiveFalse(User seller) {
+        //if (this.seller == seller) //TODO: create seller.verifyIdentity
         this.active = false;
+        //else System.out.println("Action forbidden");
+        // TODO: do try/catch instead and manage exceptions: badUser
     }
-
-
 }
+
+
