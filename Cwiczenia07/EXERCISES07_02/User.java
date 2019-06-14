@@ -23,14 +23,45 @@ public class User {
         this.stars = stars;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSurmame() {
+        return surmame;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public int getStars() {
+        return stars;
+    }
+
     //methods:
 
+    // zmiań sobie login
+    private void changeLogin(String newLogin){
+        this.login = newLogin;
+        //TODO: update login for all ongoing activities
+    }
+    // zmiań sobie email
+    private void changeEmail(String newEmail){
+        this.email = newEmail;
+        //TODO: update email for all ongoing activities
+    }
 
     public void recieveStar(){
         this.stars = this.stars +1;
         //TODO: Prevent cheating
     }
 
+    // dodaj userowi gwiazdkę
     private void grantStar(Auction auction){
         //     czy zakonczona?
         //     czy jestes sprzedawca?
@@ -43,13 +74,23 @@ public class User {
 
     }
 
-
+    // utwórz nową aukcję
     private void createAuction(String auctionType, String description, int startingPrice, int rounds, int minimalStars){
         User seller = this;
         Auction myAuction = new Auction(auctionType, description, startingPrice, rounds, minimalStars, seller);
     }
 
 
+    // zakończ aukcje przed czasem
+    private void setActiveFalse(Auction auction) {
+        if (auction.getSeller() == this && auction.isActive()) { //TODO: create seller.verifyIdentity
+            auction.setActive(false);
+        }
+        //else System.out.println("Action forbidden");
+        // TODO: do try/catch instead and manage exceptions: badUser
+    }
+
+    // licytuj
     private void placeBid(Auction auction, int bidAmount){
         User buyer = this;
         auction.bid(buyer,bidAmount);

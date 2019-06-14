@@ -40,6 +40,10 @@ public class Auction {
         return id;
     }
 
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
     public String getAuctionType() {
         return auctionType;
     }
@@ -101,9 +105,8 @@ public class Auction {
         //  1 runda to jeden bid lub czas 10s
         //  kazdy bid wydluza aukcje o 1 runde: rounnds = rounds + 1;
         //  koniec gdy pojawi sie runda bez bidow: active = false;
-        //this.rounds = this.rounds + 1;
-        //TimeUnit.SECONDS.sleep(10);
-        this.active = false;
+        this.rounds = this.rounds + 1;
+        countdownToEndAuction();
     }
 //    private void iterateRoundsReversed() {
 //        //  kazdy bid obniza cene o '1'
@@ -114,8 +117,6 @@ public class Auction {
 
 
 
-
-    //bid(User buyer, int bidAmount)
     public void bid(User buyer, int bidAmount) {
         if (this.active && bidAmount > this.highestBid) {
             this.highestBidder = buyer;
@@ -126,15 +127,23 @@ public class Auction {
     }
 
 
+    // odliczanie pustych rund do końca aukcji
+    private void countdownToEndAuction(){
+        TimeUnit.SECONDS.sleep(10);
+        this.rounds--;
+        if (this.rounds <= 0){
+            this.active = false;
+        }
+        User winner = this.getHighestBidder();
+        if(winner != null){
+            System.out.println("The winner is: " + winner.getLogin());
+        }
+        else System.out.println("There were no offers");
 
-
-    // zakończ aukcje przed czasem
-    public void setActiveFalse(User seller) {
-        //if (this.seller == seller) //TODO: create seller.verifyIdentity
-        this.active = false;
-        //else System.out.println("Action forbidden");
-        // TODO: do try/catch instead and manage exceptions: badUser
     }
+
+
+
 }
 
 
